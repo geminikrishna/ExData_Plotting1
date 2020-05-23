@@ -6,3 +6,6 @@ plots=filter(file, Date >= "2007-02-01" & Date <= "2007-02-02")
 datetime=strptime(paste(plots$Date,plots$Time),format =  "%Y-%m-%d %H:%M:%S" )
 plot(datetime,plots$Global_active_power,type = "l",ylab="Global Active Power (kilowatts)",, xlab="")
 
+dev.copy(png,"plot2.png", width=480, height=480)
+dev.off()
+
